@@ -4,6 +4,9 @@ on:
   push:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -35,8 +38,8 @@ jobs:
             git config user.name "arena-ci"
             git config user.email "arena-ci@localhost"
             git add ci-error-tail.txt
-            git commit -m "CI error tail [skip ci]" || true
-            git push || true
+            git commit -m "CI error tail [skip ci]"
+            git push
           fi
           exit $code
 
