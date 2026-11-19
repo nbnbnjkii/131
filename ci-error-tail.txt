@@ -1,83 +1,244 @@
-                           ^
-/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__string/char_traits.h:79:8: note: 'char_traits<unsigned char>' has been explicitly marked deprecated here
-struct _LIBCPP_DEPRECATED_("char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in LLVM 18, so please migrate off of it.")
-       ^
-/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__config:772:53: note: expanded from macro '_LIBCPP_DEPRECATED_'
-#      define _LIBCPP_DEPRECATED_(m) __attribute__((deprecated(m)))
-                                                    ^
-In file included from /home/runner/work/131/131/app/src/main/cpp/GltfScene.cpp:11:
-In file included from /home/runner/work/131/131/app/src/main/cpp/third_party/tiny_gltf.h:1715:
-/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:7926:43: warning: 'char_traits<unsigned char>' is deprecated: char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in LLVM 18, so please migrate off of it. [-Wdeprecated-declarations]
-            if (JSON_HEDLEY_UNLIKELY(std::char_traits<char_type>::to_char_type(get()) != literal_text[i]))
-                                          ^
-/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__string/char_traits.h:79:8: note: 'char_traits<unsigned char>' has been explicitly marked deprecated here
-struct _LIBCPP_DEPRECATED_("char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in LLVM 18, so please migrate off of it.")
-       ^
-/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__config:772:53: note: expanded from macro '_LIBCPP_DEPRECATED_'
-#      define _LIBCPP_DEPRECATED_(m) __attribute__((deprecated(m)))
-                                                    ^
-In file included from /home/runner/work/131/131/app/src/main/cpp/GltfScene.cpp:11:
-In file included from /home/runner/work/131/131/app/src/main/cpp/third_party/tiny_gltf.h:1715:
-/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:6888:27: warning: 'char_traits<unsigned char>' is deprecated: char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in LLVM 18, so please migrate off of it. [-Wdeprecated-declarations]
-                case std::char_traits<char_type>::eof():
-                          ^
-/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:8188:24: note: in instantiation of member function 'nlohmann::detail::lexer<nlohmann::basic_json<>, nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>>::scan_string' requested here
-                return scan_string();
-                       ^
-/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:11380:37: note: in instantiation of member function 'nlohmann::detail::lexer<nlohmann::basic_json<>, nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>>::scan' requested here
-        return last_token = m_lexer.scan();
-                                    ^
-/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:10997:9: note: in instantiation of member function 'nlohmann::detail::parser<nlohmann::basic_json<>, nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>>::get_token' requested here
-        get_token();
+C/C++: In file included from /home/runner/work/131/131/app/src/main/cpp/main.cpp:3:
+C/C++: In file included from /home/runner/work/131/131/app/src/main/cpp/Renderer.h:11:
+C/C++: In file included from /home/runner/work/131/131/app/src/main/cpp/Interaction.h:2:
+C/C++: In file included from /home/runner/work/131/131/app/src/main/cpp/ObjectMesh.h:2:
+C/C++: /home/runner/work/131/131/app/src/main/cpp/MeshGeometry.h:12:5: error: use of undeclared identifier 'appendCube'
+C/C++:     appendCube(vertices,{x,feetY+0.85f,z,0.5f,1.7f,0.5f,0.22f,0.44f,0.82f,sandbox::Plain});
+C/C++:     ^
+C/C++: /home/runner/work/131/131/app/src/main/cpp/MeshGeometry.h:13:5: error: use of undeclared identifier 'appendCube'
+C/C++:     appendCube(vertices,{x,feetY+1.88f,z,0.30f,0.30f,0.30f,0.10f,0.32f,0.68f,sandbox::Plain});
+C/C++:     ^
+C/C++: In file included from /home/runner/work/131/131/app/src/main/cpp/main.cpp:4:
+C/C++: /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:43:10: fatal error: 'system_utils.h' file not found
+C/C++: #include "system_utils.h"
+C/C++:          ^~~~~~~~~~~~~~~~
+C/C++: 3 errors generated.
+C/C++: /usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Drealms_EXPORTS -isystem /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -MD -MT CMakeFiles/realms.dir/Renderer.cpp.o -MF CMakeFiles/realms.dir/Renderer.cpp.o.d -o CMakeFiles/realms.dir/Renderer.cpp.o -c /home/runner/work/131/131/app/src/main/cpp/Renderer.cpp
+C/C++: In file included from /home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:1:
+C/C++: In file included from /home/runner/work/131/131/app/src/main/cpp/Renderer.h:11:
+C/C++: In file included from /home/runner/work/131/131/app/src/main/cpp/Interaction.h:2:
+C/C++: In file included from /home/runner/work/131/131/app/src/main/cpp/ObjectMesh.h:2:
+C/C++: /home/runner/work/131/131/app/src/main/cpp/MeshGeometry.h:12:5: error: use of undeclared identifier 'appendCube'
+C/C++:     appendCube(vertices,{x,feetY+0.85f,z,0.5f,1.7f,0.5f,0.22f,0.44f,0.82f,sandbox::Plain});
+C/C++:     ^
+C/C++: /home/runner/work/131/131/app/src/main/cpp/MeshGeometry.h:13:5: error: use of undeclared identifier 'appendCube'
+C/C++:     appendCube(vertices,{x,feetY+1.88f,z,0.30f,0.30f,0.30f,0.10f,0.32f,0.68f,sandbox::Plain});
+C/C++:     ^
+C/C++: /home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:196:9: error: use of undeclared identifier 'drone_'
+C/C++:  return drone_.exploded?1.f:0.f;
+C/C++:         ^
+C/C++: /home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:628:82: error: use of undeclared identifier 'matrix'
+C/C++:   glUniformMatrix4fv(glGetUniformLocation(program_,"objectTransform"),1,GL_FALSE,matrix);
+C/C++:                                                                                  ^
+C/C++: /home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:672:2: error: expected unqualified-id
+C/C++:  if(gameplayReady&&tools_.tool==sandbox::HandTool::DRONE_REMOTE&&remote_.ready()&&!drone_.piloting()&&seatedCar_<0){
+C/C++:  ^
+C/C++: /home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:685:2: error: expected unqualified-id
+C/C++:  if(gameplayReady&&tools_.tool==sandbox::HandTool::DRONE_REMOTE&&!drone_.piloting()&&seatedCar_<0&&drone_.mode!=sandbox::FpvDrone::Absent&&drone_.mode!=sandbox::FpvDrone::InHands){
+C/C++:  ^
+C/C++: /home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:695:2: error: expected unqualified-id
+C/C++:  if(eglSwapBuffers(display_,surface_)==EGL_TRUE){
+C/C++:  ^
+C/C++: /home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:698:3: error: expected unqualified-id
+C/C++:  }else loadStage=-1;
+C/C++:   ^
+C/C++: /home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:699:1: error: extraneous closing brace ('}')
+C/C++: }
+C/C++: ^
+C/C++: 9 errors generated.
+C/C++: In file included from /home/runner/work/131/131/app/src/main/cpp/GltfScene.cpp:11:
+C/C++: In file included from /home/runner/work/131/131/app/src/main/cpp/third_party/tiny_gltf.h:1715:
+C/C++: /home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:5563:19: warning: 'char_traits<unsigned char>' is deprecated: char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in LLVM 18, so please migrate off of it. [-Wdeprecated-declarations]
+C/C++:     typename std::char_traits<char_type>::int_type get_character()
+C/C++:                   ^
+C/C++: /home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:24443:16: note: in instantiation of template class 'nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>' requested here
+C/C++:         parser(detail::input_adapter(std::move(first), std::move(last)), cb, allow_exceptions, ignore_comments).parse(true, result);
+C/C++:                ^
+C/C++: /home/runner/work/131/131/app/src/main/cpp/GltfScene.cpp:151:28: note: in instantiation of function template specialization 'nlohmann::basic_json<>::parse<std::__wrap_iter<unsigned char *>>' requested here
+--
+  In file included from /home/runner/work/131/131/app/src/main/cpp/main.cpp:3:
+  In file included from /home/runner/work/131/131/app/src/main/cpp/Renderer.h:11:
+  In file included from /home/runner/work/131/131/app/src/main/cpp/Interaction.h:2:
+  In file included from /home/runner/work/131/131/app/src/main/cpp/ObjectMesh.h:2:
+  /home/runner/work/131/131/app/src/main/cpp/MeshGeometry.h:12:5: error: use of undeclared identifier 'appendCube'
+      appendCube(vertices,{x,feetY+0.85f,z,0.5f,1.7f,0.5f,0.22f,0.44f,0.82f,sandbox::Plain});
+      ^
+  /home/runner/work/131/131/app/src/main/cpp/MeshGeometry.h:13:5: error: use of undeclared identifier 'appendCube'
+      appendCube(vertices,{x,feetY+1.88f,z,0.30f,0.30f,0.30f,0.10f,0.32f,0.68f,sandbox::Plain});
+      ^
+  In file included from /home/runner/work/131/131/app/src/main/cpp/main.cpp:4:
+  /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:43:10: fatal error: 'system_utils.h' file not found
+  #include "system_utils.h"
+           ^~~~~~~~~~~~~~~~
+  3 errors generated.
+  [5/8] Building CXX object CMakeFiles/realms.dir/GltfRenderer.cpp.o
+  [6/8] Building CXX object CMakeFiles/realms.dir/Renderer.cpp.o
+  FAILED: CMakeFiles/realms.dir/Renderer.cpp.o 
+  /usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Drealms_EXPORTS -isystem /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -MD -MT CMakeFiles/realms.dir/Renderer.cpp.o -MF CMakeFiles/realms.dir/Renderer.cpp.o.d -o CMakeFiles/realms.dir/Renderer.cpp.o -c /home/runner/work/131/131/app/src/main/cpp/Renderer.cpp
+  In file included from /home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:1:
+  In file included from /home/runner/work/131/131/app/src/main/cpp/Renderer.h:11:
+  In file included from /home/runner/work/131/131/app/src/main/cpp/Interaction.h:2:
+  In file included from /home/runner/work/131/131/app/src/main/cpp/ObjectMesh.h:2:
+  /home/runner/work/131/131/app/src/main/cpp/MeshGeometry.h:12:5: error: use of undeclared identifier 'appendCube'
+      appendCube(vertices,{x,feetY+0.85f,z,0.5f,1.7f,0.5f,0.22f,0.44f,0.82f,sandbox::Plain});
+      ^
+  /home/runner/work/131/131/app/src/main/cpp/MeshGeometry.h:13:5: error: use of undeclared identifier 'appendCube'
+      appendCube(vertices,{x,feetY+1.88f,z,0.30f,0.30f,0.30f,0.10f,0.32f,0.68f,sandbox::Plain});
+      ^
+  /home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:196:9: error: use of undeclared identifier 'drone_'
+   return drone_.exploded?1.f:0.f;
+          ^
+  /home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:628:82: error: use of undeclared identifier 'matrix'
+    glUniformMatrix4fv(glGetUniformLocation(program_,"objectTransform"),1,GL_FALSE,matrix);
+                                                                                   ^
+  /home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:672:2: error: expected unqualified-id
+   if(gameplayReady&&tools_.tool==sandbox::HandTool::DRONE_REMOTE&&remote_.ready()&&!drone_.piloting()&&seatedCar_<0){
+   ^
+  /home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:685:2: error: expected unqualified-id
+   if(gameplayReady&&tools_.tool==sandbox::HandTool::DRONE_REMOTE&&!drone_.piloting()&&seatedCar_<0&&drone_.mode!=sandbox::FpvDrone::Absent&&drone_.mode!=sandbox::FpvDrone::InHands){
+   ^
+  /home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:695:2: error: expected unqualified-id
+   if(eglSwapBuffers(display_,surface_)==EGL_TRUE){
+   ^
+  /home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:698:3: error: expected unqualified-id
+   }else loadStage=-1;
+    ^
+  /home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:699:1: error: extraneous closing brace ('}')
+  }
+  ^
+  9 errors generated.
+  [7/8] Building CXX object CMakeFiles/realms.dir/GltfScene.cpp.o
+  In file included from /home/runner/work/131/131/app/src/main/cpp/GltfScene.cpp:11:
+  In file included from /home/runner/work/131/131/app/src/main/cpp/third_party/tiny_gltf.h:1715:
+  /home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:5563:19: warning: 'char_traits<unsigned char>' is deprecated: char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in LLVM 18, so please migrate off of it. [-Wdeprecated-declarations]
+      typename std::char_traits<char_type>::int_type get_character()
+                    ^
+  /home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:24443:16: note: in instantiation of template class 'nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>' requested here
+          parser(detail::input_adapter(std::move(first), std::move(last)), cb, allow_exceptions, ignore_comments).parse(true, result);
+                 ^
+--
+In file included from /home/runner/work/131/131/app/src/main/cpp/main.cpp:3:
+In file included from /home/runner/work/131/131/app/src/main/cpp/Renderer.h:11:
+In file included from /home/runner/work/131/131/app/src/main/cpp/Interaction.h:2:
+In file included from /home/runner/work/131/131/app/src/main/cpp/ObjectMesh.h:2:
+/home/runner/work/131/131/app/src/main/cpp/MeshGeometry.h:12:5: error: use of undeclared identifier 'appendCube'
+    appendCube(vertices,{x,feetY+0.85f,z,0.5f,1.7f,0.5f,0.22f,0.44f,0.82f,sandbox::Plain});
+    ^
+/home/runner/work/131/131/app/src/main/cpp/MeshGeometry.h:13:5: error: use of undeclared identifier 'appendCube'
+    appendCube(vertices,{x,feetY+1.88f,z,0.30f,0.30f,0.30f,0.10f,0.32f,0.68f,sandbox::Plain});
+    ^
+In file included from /home/runner/work/131/131/app/src/main/cpp/main.cpp:4:
+/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:43:10: fatal error: 'system_utils.h' file not found
+#include "system_utils.h"
+         ^~~~~~~~~~~~~~~~
+3 errors generated.
+[5/8] Building CXX object CMakeFiles/realms.dir/GltfRenderer.cpp.o
+[6/8] Building CXX object CMakeFiles/realms.dir/Renderer.cpp.o
+FAILED: CMakeFiles/realms.dir/Renderer.cpp.o 
+/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Drealms_EXPORTS -isystem /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -MD -MT CMakeFiles/realms.dir/Renderer.cpp.o -MF CMakeFiles/realms.dir/Renderer.cpp.o.d -o CMakeFiles/realms.dir/Renderer.cpp.o -c /home/runner/work/131/131/app/src/main/cpp/Renderer.cpp
+In file included from /home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:1:
+In file included from /home/runner/work/131/131/app/src/main/cpp/Renderer.h:11:
+In file included from /home/runner/work/131/131/app/src/main/cpp/Interaction.h:2:
+In file included from /home/runner/work/131/131/app/src/main/cpp/ObjectMesh.h:2:
+/home/runner/work/131/131/app/src/main/cpp/MeshGeometry.h:12:5: error: use of undeclared identifier 'appendCube'
+    appendCube(vertices,{x,feetY+0.85f,z,0.5f,1.7f,0.5f,0.22f,0.44f,0.82f,sandbox::Plain});
+    ^
+/home/runner/work/131/131/app/src/main/cpp/MeshGeometry.h:13:5: error: use of undeclared identifier 'appendCube'
+    appendCube(vertices,{x,feetY+1.88f,z,0.30f,0.30f,0.30f,0.10f,0.32f,0.68f,sandbox::Plain});
+    ^
+/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:196:9: error: use of undeclared identifier 'drone_'
+ return drone_.exploded?1.f:0.f;
         ^
-/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:17713:16: note: in instantiation of member function 'nlohmann::detail::parser<nlohmann::basic_json<>, nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>>::parser' requested here
-        return ::nlohmann::detail::parser<basic_json, InputAdapterType>(std::move(adapter),
-               ^
-/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:24443:9: note: in instantiation of function template specialization 'nlohmann::basic_json<>::parser<nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>>' requested here
+/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:628:82: error: use of undeclared identifier 'matrix'
+  glUniformMatrix4fv(glGetUniformLocation(program_,"objectTransform"),1,GL_FALSE,matrix);
+                                                                                 ^
+/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:672:2: error: expected unqualified-id
+ if(gameplayReady&&tools_.tool==sandbox::HandTool::DRONE_REMOTE&&remote_.ready()&&!drone_.piloting()&&seatedCar_<0){
+ ^
+/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:685:2: error: expected unqualified-id
+ if(gameplayReady&&tools_.tool==sandbox::HandTool::DRONE_REMOTE&&!drone_.piloting()&&seatedCar_<0&&drone_.mode!=sandbox::FpvDrone::Absent&&drone_.mode!=sandbox::FpvDrone::InHands){
+ ^
+/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:695:2: error: expected unqualified-id
+ if(eglSwapBuffers(display_,surface_)==EGL_TRUE){
+ ^
+/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:698:3: error: expected unqualified-id
+ }else loadStage=-1;
+  ^
+/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:699:1: error: extraneous closing brace ('}')
+}
+^
+9 errors generated.
+[7/8] Building CXX object CMakeFiles/realms.dir/GltfScene.cpp.o
+In file included from /home/runner/work/131/131/app/src/main/cpp/GltfScene.cpp:11:
+In file included from /home/runner/work/131/131/app/src/main/cpp/third_party/tiny_gltf.h:1715:
+/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:5563:19: warning: 'char_traits<unsigned char>' is deprecated: char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in LLVM 18, so please migrate off of it. [-Wdeprecated-declarations]
+    typename std::char_traits<char_type>::int_type get_character()
+                  ^
+/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:24443:16: note: in instantiation of template class 'nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>' requested here
         parser(detail::input_adapter(std::move(first), std::move(last)), cb, allow_exceptions, ignore_comments).parse(true, result);
+               ^
+--
+In file included from /home/runner/work/131/131/app/src/main/cpp/main.cpp:3:
+In file included from /home/runner/work/131/131/app/src/main/cpp/Renderer.h:11:
+In file included from /home/runner/work/131/131/app/src/main/cpp/Interaction.h:2:
+In file included from /home/runner/work/131/131/app/src/main/cpp/ObjectMesh.h:2:
+/home/runner/work/131/131/app/src/main/cpp/MeshGeometry.h:12:5: error: use of undeclared identifier 'appendCube'
+    appendCube(vertices,{x,feetY+0.85f,z,0.5f,1.7f,0.5f,0.22f,0.44f,0.82f,sandbox::Plain});
+    ^
+/home/runner/work/131/131/app/src/main/cpp/MeshGeometry.h:13:5: error: use of undeclared identifier 'appendCube'
+    appendCube(vertices,{x,feetY+1.88f,z,0.30f,0.30f,0.30f,0.10f,0.32f,0.68f,sandbox::Plain});
+    ^
+In file included from /home/runner/work/131/131/app/src/main/cpp/main.cpp:4:
+/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:43:10: fatal error: 'system_utils.h' file not found
+#include "system_utils.h"
+         ^~~~~~~~~~~~~~~~
+3 errors generated.
+[5/8] Building CXX object CMakeFiles/realms.dir/GltfRenderer.cpp.o
+[6/8] Building CXX object CMakeFiles/realms.dir/Renderer.cpp.o
+FAILED: CMakeFiles/realms.dir/Renderer.cpp.o 
+/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Drealms_EXPORTS -isystem /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -MD -MT CMakeFiles/realms.dir/Renderer.cpp.o -MF CMakeFiles/realms.dir/Renderer.cpp.o.d -o CMakeFiles/realms.dir/Renderer.cpp.o -c /home/runner/work/131/131/app/src/main/cpp/Renderer.cpp
+In file included from /home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:1:
+In file included from /home/runner/work/131/131/app/src/main/cpp/Renderer.h:11:
+In file included from /home/runner/work/131/131/app/src/main/cpp/Interaction.h:2:
+In file included from /home/runner/work/131/131/app/src/main/cpp/ObjectMesh.h:2:
+/home/runner/work/131/131/app/src/main/cpp/MeshGeometry.h:12:5: error: use of undeclared identifier 'appendCube'
+    appendCube(vertices,{x,feetY+0.85f,z,0.5f,1.7f,0.5f,0.22f,0.44f,0.82f,sandbox::Plain});
+    ^
+/home/runner/work/131/131/app/src/main/cpp/MeshGeometry.h:13:5: error: use of undeclared identifier 'appendCube'
+    appendCube(vertices,{x,feetY+1.88f,z,0.30f,0.30f,0.30f,0.10f,0.32f,0.68f,sandbox::Plain});
+    ^
+/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:196:9: error: use of undeclared identifier 'drone_'
+ return drone_.exploded?1.f:0.f;
         ^
-/home/runner/work/131/131/app/src/main/cpp/GltfScene.cpp:151:28: note: in instantiation of function template specialization 'nlohmann::basic_json<>::parse<std::__wrap_iter<unsigned char *>>' requested here
-    auto j=nlohmann::json::parse(bytes.begin()+offset,bytes.begin()+offset+length);
-                           ^
-/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__string/char_traits.h:79:8: note: 'char_traits<unsigned char>' has been explicitly marked deprecated here
-struct _LIBCPP_DEPRECATED_("char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in LLVM 18, so please migrate off of it.")
-       ^
-/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__config:772:53: note: expanded from macro '_LIBCPP_DEPRECATED_'
-#      define _LIBCPP_DEPRECATED_(m) __attribute__((deprecated(m)))
-                                                    ^
+/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:628:82: error: use of undeclared identifier 'matrix'
+  glUniformMatrix4fv(glGetUniformLocation(program_,"objectTransform"),1,GL_FALSE,matrix);
+                                                                                 ^
+/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:672:2: error: expected unqualified-id
+ if(gameplayReady&&tools_.tool==sandbox::HandTool::DRONE_REMOTE&&remote_.ready()&&!drone_.piloting()&&seatedCar_<0){
+ ^
+/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:685:2: error: expected unqualified-id
+ if(gameplayReady&&tools_.tool==sandbox::HandTool::DRONE_REMOTE&&!drone_.piloting()&&seatedCar_<0&&drone_.mode!=sandbox::FpvDrone::Absent&&drone_.mode!=sandbox::FpvDrone::InHands){
+ ^
+/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:695:2: error: expected unqualified-id
+ if(eglSwapBuffers(display_,surface_)==EGL_TRUE){
+ ^
+/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:698:3: error: expected unqualified-id
+ }else loadStage=-1;
+  ^
+/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:699:1: error: extraneous closing brace ('}')
+}
+^
+9 errors generated.
+[7/8] Building CXX object CMakeFiles/realms.dir/GltfScene.cpp.o
 In file included from /home/runner/work/131/131/app/src/main/cpp/GltfScene.cpp:11:
 In file included from /home/runner/work/131/131/app/src/main/cpp/third_party/tiny_gltf.h:1715:
-/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:7944:37: warning: 'char_traits<unsigned char>' is deprecated: char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in LLVM 18, so please migrate off of it. [-Wdeprecated-declarations]
-        token_string.push_back(std::char_traits<char_type>::to_char_type(current));
-                                    ^
-/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:6877:9: note: in instantiation of member function 'nlohmann::detail::lexer<nlohmann::basic_json<>, nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>>::reset' requested here
-        reset();
-        ^
-/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:8188:24: note: in instantiation of member function 'nlohmann::detail::lexer<nlohmann::basic_json<>, nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>>::scan_string' requested here
-                return scan_string();
-                       ^
-/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:11380:37: note: in instantiation of member function 'nlohmann::detail::lexer<nlohmann::basic_json<>, nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>>::scan' requested here
-        return last_token = m_lexer.scan();
-                                    ^
-/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:10997:9: note: in instantiation of member function 'nlohmann::detail::parser<nlohmann::basic_json<>, nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>>::get_token' requested here
-        get_token();
-        ^
-/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:17713:16: note: in instantiation of member function 'nlohmann::detail::parser<nlohmann::basic_json<>, nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>>::parser' requested here
-        return ::nlohmann::detail::parser<basic_json, InputAdapterType>(std::move(adapter),
-               ^
-/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:24443:9: note: in instantiation of function template specialization 'nlohmann::basic_json<>::parser<nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>>' requested here
+/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:5563:19: warning: 'char_traits<unsigned char>' is deprecated: char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in LLVM 18, so please migrate off of it. [-Wdeprecated-declarations]
+    typename std::char_traits<char_type>::int_type get_character()
+                  ^
+/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:24443:16: note: in instantiation of template class 'nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>' requested here
         parser(detail::input_adapter(std::move(first), std::move(last)), cb, allow_exceptions, ignore_comments).parse(true, result);
-        ^
-/home/runner/work/131/131/app/src/main/cpp/GltfScene.cpp:151:28: note: in instantiation of function template specialization 'nlohmann::basic_json<>::parse<std::__wrap_iter<unsigned char *>>' requested here
-    auto j=nlohmann::json::parse(bytes.begin()+offset,bytes.begin()+offset+length);
-                           ^
-/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__string/char_traits.h:79:8: note: 'char_traits<unsigned char>' has been explicitly marked deprecated here
-struct _LIBCPP_DEPRECATED_("char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in LLVM 18, so please migrate off of it.")
-       ^
-/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__config:772:53: note: expanded from macro '_LIBCPP_DEPRECATED_'
-#      define _LIBCPP_DEPRECATED_(m) __attribute__((deprecated(m)))
-                                                    ^
-15 warnings generated.
+               ^
+=================== TAIL ===================
 ninja: build stopped: subcommand failed.
 
 C++ build system [build] failed while executing:
@@ -104,17 +265,17 @@ C++ build system [build] failed while executing:
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:125)
-	... 119 more
+	... 149 more
 Caused by: com.android.ide.common.process.ProcessException: Error while executing process /usr/local/lib/android/sdk/cmake/3.22.1/bin/ninja with arguments {-C /home/runner/work/131/131/app/.cxx/Debug/1e2g734d/arm64-v8a realms}
 	at com.android.build.gradle.internal.process.GradleProcessResult.buildProcessException(GradleProcessResult.java:73)
 	at com.android.build.gradle.internal.process.GradleProcessResult.assertNormalExitValue(GradleProcessResult.java:48)
 	at com.android.build.gradle.internal.cxx.process.ExecuteProcessKt.execute(ExecuteProcess.kt:277)
-	... 136 more
+	... 166 more
 Caused by: org.gradle.process.internal.ExecException: Process 'command '/usr/local/lib/android/sdk/cmake/3.22.1/bin/ninja'' finished with non-zero exit value 1
 	at org.gradle.process.internal.DefaultExecHandle$ExecResultImpl.assertNormalExitValue(DefaultExecHandle.java:442)
 	at com.android.build.gradle.internal.process.GradleProcessResult.assertNormalExitValue(GradleProcessResult.java:46)
-	... 137 more
+	... 167 more
 
 
-BUILD FAILED in 1m 42s
-26 actionable tasks: 26 executed
+BUILD FAILED in 2m 4s
+30 actionable tasks: 30 executed
