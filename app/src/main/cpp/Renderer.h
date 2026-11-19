@@ -55,6 +55,10 @@ private:
     sandbox::Object carParking_{8,0,0,0};
     bool carParkingValid_=false;
     void respawnPlayer();
+    void spawnExplodingBarrel();
+    void spawnWoodenCrate();
+    void spawnMetalCrate();
+    void spawnConcreteBlock();
     physics::PlayerController player_;
     bool crouched_=false,prone_=false;
     // Third-person camera state
