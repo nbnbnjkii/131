@@ -26,7 +26,19 @@ jobs:
           "$SDKMANAGER" "platforms;android-34" "build-tools;34.0.0" "ndk;26.1.10909125" "cmake;3.22.1"
 
       - name: Build debug APK
-        run: ./gradlew :app:assembleDebug --no-daemon --stacktrace
+        run: |
+          set +e
+          ./gradlew :app:assembleDebug --no-daemon --stacktrace > build-output.log 2>&1
+          code=$?
+          if [ $code -ne 0 ]; then
+            tail -120 build-output.log > ci-error-tail.txt
+            git config user.name "arena-ci"
+            git config user.email "arena-ci@localhost"
+            git add ci-error-tail.txt
+            git commit -m "CI error tail [skip ci]" || true
+            git push || true
+          fi
+          exit $code
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
