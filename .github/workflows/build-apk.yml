@@ -34,7 +34,10 @@ jobs:
           ./gradlew :app:assembleDebug --no-daemon --stacktrace > build-output.log 2>&1
           code=$?
           if [ $code -ne 0 ]; then
-            tail -120 build-output.log > ci-error-tail.txt
+            { grep -B4 -A12 -E "error:|error :" build-output.log | head -250
+              echo "=================== TAIL ==================="
+              tail -40 build-output.log
+            } > ci-error-tail.txt
             git config user.name "arena-ci"
             git config user.email "arena-ci@localhost"
             git add ci-error-tail.txt
