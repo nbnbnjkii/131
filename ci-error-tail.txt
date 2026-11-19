@@ -1,253 +1,131 @@
+C/C++: #      define _LIBCPP_DEPRECATED_(m) __attribute__((deprecated(m)))
+C/C++:                                                     ^
+C/C++: 15 warnings generated.
+C/C++: : && /usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -fPIC -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -shared -Wl,-soname,librealms.so -o /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so CMakeFiles/realms.dir/main.cpp.o CMakeFiles/realms.dir/AndroidOut.cpp.o CMakeFiles/realms.dir/Renderer.cpp.o CMakeFiles/realms.dir/TextureLoader.cpp.o CMakeFiles/realms.dir/ImageDecode.cpp.o CMakeFiles/realms.dir/GltfScene.cpp.o CMakeFiles/realms.dir/GltfRenderer.cpp.o  /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/libs/android.arm64-v8a/libgame-activity.a  -lEGL  -lGLESv3  -landroid  -llog  -latomic -lm && :
+C/C++: ld.lld: error: undefined symbol: android_app_swap_input_buffers
+C/C++: >>> referenced by Renderer.cpp:400 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:400)
+C/C++: >>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
+C/C++: ld.lld: error: undefined symbol: android_app_clear_motion_events
+C/C++: >>> referenced by Renderer.cpp:403 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:403)
+C/C++: >>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
+C/C++: ld.lld: error: undefined symbol: android_app_clear_key_events
+C/C++: >>> referenced by Renderer.cpp:403 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:403)
+C/C++: >>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
+C/C++: ld.lld: error: undefined symbol: android_app_set_motion_event_filter
+C/C++: >>> referenced by main.cpp:40 (/home/runner/work/131/131/app/src/main/cpp/main.cpp:40)
+C/C++: >>>               CMakeFiles/realms.dir/main.cpp.o:(android_main)
+C/C++: clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+C/C++: ninja: build stopped: subcommand failed.
 
-> Task :app:buildCMakeDebug[arm64-v8a]
-C/C++: ninja: Entering directory `/home/runner/work/131/131/app/.cxx/Debug/1e2g734d/arm64-v8a'
-C/C++: /usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Drealms_EXPORTS -isystem /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -MD -MT CMakeFiles/realms.dir/main.cpp.o -MF CMakeFiles/realms.dir/main.cpp.o.d -o CMakeFiles/realms.dir/main.cpp.o -c /home/runner/work/131/131/app/src/main/cpp/main.cpp
-C/C++: /home/runner/work/131/131/app/src/main/cpp/main.cpp:10:49: error: member access into incomplete type 'android_app'
-C/C++:     auto *renderer = static_cast<Renderer *>(app->userData);
-C/C++:                                                 ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-C/C++: struct android_app;
-C/C++:        ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/main.cpp:12:14: error: use of undeclared identifier 'APP_CMD_INIT_WINDOW'
-C/C++:         case APP_CMD_INIT_WINDOW:
-C/C++:              ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/main.cpp:14:16: error: member access into incomplete type 'android_app'
-C/C++:             app->userData = app->window ? new Renderer(app) : nullptr;
-C/C++:                ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-C/C++: struct android_app;
-C/C++:        ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/main.cpp:14:32: error: member access into incomplete type 'android_app'
-C/C++:             app->userData = app->window ? new Renderer(app) : nullptr;
-C/C++:                                ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-C/C++: struct android_app;
-C/C++:        ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/main.cpp:16:14: error: use of undeclared identifier 'APP_CMD_TERM_WINDOW'
-C/C++:         case APP_CMD_TERM_WINDOW:
-C/C++:              ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/main.cpp:18:16: error: member access into incomplete type 'android_app'
-C/C++:             app->userData = nullptr;
-C/C++:                ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-C/C++: struct android_app;
-C/C++:        ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/main.cpp:20:14: error: use of undeclared identifier 'APP_CMD_GAINED_FOCUS'
-C/C++:         case APP_CMD_GAINED_FOCUS:
-C/C++:              ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/main.cpp:24:14: error: use of undeclared identifier 'APP_CMD_LOST_FOCUS'
-C/C++:         case APP_CMD_LOST_FOCUS:
-C/C++:              ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/main.cpp:25:14: error: use of undeclared identifier 'APP_CMD_PAUSE'
-C/C++:         case APP_CMD_PAUSE:
-C/C++:              ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/main.cpp:38:8: error: member access into incomplete type 'android_app'
-C/C++:     app->onAppCmd = handle_cmd;
-C/C++:        ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-C/C++: struct android_app;
-C/C++:        ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/main.cpp:39:5: error: use of undeclared identifier 'android_app_set_motion_event_filter'
-C/C++:     android_app_set_motion_event_filter(app, motion_event_filter_func);
-C/C++:     ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/main.cpp:40:16: error: member access into incomplete type 'android_app'
-C/C++:     while (!app->destroyRequested) {
-C/C++:                ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-C/C++: struct android_app;
-C/C++:        ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/main.cpp:42:9: error: unknown type name 'android_poll_source'
-C/C++:         android_poll_source *source = nullptr;
-C/C++:         ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/main.cpp:43:58: error: member access into incomplete type 'android_app'
-C/C++:         const int result = ALooper_pollOnce(active && app->userData ? 0 : -1, nullptr,
-C/C++:                                                          ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-C/C++: struct android_app;
-C/C++:        ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/main.cpp:47:16: error: member access into incomplete type 'android_app'
-C/C++:         if (app->destroyRequested) break;
-C/C++:                ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-C/C++: struct android_app;
-C/C++:        ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/main.cpp:48:26: error: member access into incomplete type 'android_app'
-C/C++:         if (active && app->userData) {
-C/C++:                          ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-C/C++: struct android_app;
-C/C++:        ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/main.cpp:49:57: error: member access into incomplete type 'android_app'
-C/C++:             auto *renderer = static_cast<Renderer *>(app->userData);
-C/C++:                                                         ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-C/C++: struct android_app;
-C/C++:        ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/main.cpp:54:39: error: member access into incomplete type 'android_app'
-C/C++:     delete static_cast<Renderer *>(app->userData);
-C/C++:                                       ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-C/C++: struct android_app;
-C/C++:        ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/main.cpp:55:8: error: member access into incomplete type 'android_app'
-C/C++:     app->userData = nullptr;
-C/C++:        ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-C/C++: struct android_app;
-C/C++:        ^
-C/C++: 19 errors generated.
-C/C++: In file included from /home/runner/work/131/131/app/src/main/cpp/GltfScene.cpp:11:
-C/C++: In file included from /home/runner/work/131/131/app/src/main/cpp/third_party/tiny_gltf.h:1715:
-C/C++: /home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:5563:19: warning: 'char_traits<unsigned char>' is deprecated: char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in LLVM 18, so please migrate off of it. [-Wdeprecated-declarations]
-C/C++:     typename std::char_traits<char_type>::int_type get_character()
-C/C++:                   ^
-C/C++: /home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:24443:16: note: in instantiation of template class 'nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>' requested here
+> Task :app:buildCMakeDebug[arm64-v8a] FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:buildCMakeDebug[arm64-v8a]'.
+> com.android.ide.common.process.ProcessException: ninja: Entering directory `/home/runner/work/131/131/app/.cxx/Debug/1e2g734d/arm64-v8a'
+  [1/8] Building CXX object CMakeFiles/realms.dir/TextureLoader.cpp.o
+  [2/8] Building CXX object CMakeFiles/realms.dir/ImageDecode.cpp.o
+  [3/8] Building CXX object CMakeFiles/realms.dir/AndroidOut.cpp.o
 --
-  [4/8] Building CXX object CMakeFiles/realms.dir/GltfRenderer.cpp.o
-  [5/8] Building CXX object CMakeFiles/realms.dir/main.cpp.o
-  FAILED: CMakeFiles/realms.dir/main.cpp.o 
-  /usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Drealms_EXPORTS -isystem /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -MD -MT CMakeFiles/realms.dir/main.cpp.o -MF CMakeFiles/realms.dir/main.cpp.o.d -o CMakeFiles/realms.dir/main.cpp.o -c /home/runner/work/131/131/app/src/main/cpp/main.cpp
-  /home/runner/work/131/131/app/src/main/cpp/main.cpp:10:49: error: member access into incomplete type 'android_app'
-      auto *renderer = static_cast<Renderer *>(app->userData);
-                                                  ^
-  /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-  struct android_app;
-         ^
-  /home/runner/work/131/131/app/src/main/cpp/main.cpp:12:14: error: use of undeclared identifier 'APP_CMD_INIT_WINDOW'
-          case APP_CMD_INIT_WINDOW:
-               ^
-  /home/runner/work/131/131/app/src/main/cpp/main.cpp:14:16: error: member access into incomplete type 'android_app'
-              app->userData = app->window ? new Renderer(app) : nullptr;
-                 ^
-  /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-  struct android_app;
-         ^
-  /home/runner/work/131/131/app/src/main/cpp/main.cpp:14:32: error: member access into incomplete type 'android_app'
-              app->userData = app->window ? new Renderer(app) : nullptr;
-                                 ^
-  /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-  struct android_app;
-         ^
-  /home/runner/work/131/131/app/src/main/cpp/main.cpp:16:14: error: use of undeclared identifier 'APP_CMD_TERM_WINDOW'
-          case APP_CMD_TERM_WINDOW:
-               ^
-  /home/runner/work/131/131/app/src/main/cpp/main.cpp:18:16: error: member access into incomplete type 'android_app'
-              app->userData = nullptr;
-                 ^
-  /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-  struct android_app;
-         ^
-  /home/runner/work/131/131/app/src/main/cpp/main.cpp:20:14: error: use of undeclared identifier 'APP_CMD_GAINED_FOCUS'
-          case APP_CMD_GAINED_FOCUS:
-               ^
-  /home/runner/work/131/131/app/src/main/cpp/main.cpp:24:14: error: use of undeclared identifier 'APP_CMD_LOST_FOCUS'
-          case APP_CMD_LOST_FOCUS:
-               ^
-  /home/runner/work/131/131/app/src/main/cpp/main.cpp:25:14: error: use of undeclared identifier 'APP_CMD_PAUSE'
-          case APP_CMD_PAUSE:
-               ^
-  /home/runner/work/131/131/app/src/main/cpp/main.cpp:38:8: error: member access into incomplete type 'android_app'
-      app->onAppCmd = handle_cmd;
-         ^
-  /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-  struct android_app;
-         ^
-  /home/runner/work/131/131/app/src/main/cpp/main.cpp:39:5: error: use of undeclared identifier 'android_app_set_motion_event_filter'
-      android_app_set_motion_event_filter(app, motion_event_filter_func);
-      ^
-  /home/runner/work/131/131/app/src/main/cpp/main.cpp:40:16: error: member access into incomplete type 'android_app'
-      while (!app->destroyRequested) {
-                 ^
-  /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-  struct android_app;
-         ^
-  /home/runner/work/131/131/app/src/main/cpp/main.cpp:42:9: error: unknown type name 'android_poll_source'
-          android_poll_source *source = nullptr;
-          ^
-  /home/runner/work/131/131/app/src/main/cpp/main.cpp:43:58: error: member access into incomplete type 'android_app'
-          const int result = ALooper_pollOnce(active && app->userData ? 0 : -1, nullptr,
-                                                           ^
-  /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-  struct android_app;
-         ^
-  /home/runner/work/131/131/app/src/main/cpp/main.cpp:47:16: error: member access into incomplete type 'android_app'
-          if (app->destroyRequested) break;
-                 ^
-  /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-  struct android_app;
-         ^
-  /home/runner/work/131/131/app/src/main/cpp/main.cpp:48:26: error: member access into incomplete type 'android_app'
-          if (active && app->userData) {
-                           ^
-  /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-  struct android_app;
-         ^
-  /home/runner/work/131/131/app/src/main/cpp/main.cpp:49:57: error: member access into incomplete type 'android_app'
-              auto *renderer = static_cast<Renderer *>(app->userData);
-                                                          ^
-  /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-  struct android_app;
-         ^
-  /home/runner/work/131/131/app/src/main/cpp/main.cpp:54:39: error: member access into incomplete type 'android_app'
-      delete static_cast<Renderer *>(app->userData);
-                                        ^
-  /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-  struct android_app;
-         ^
-  /home/runner/work/131/131/app/src/main/cpp/main.cpp:55:8: error: member access into incomplete type 'android_app'
-      app->userData = nullptr;
-         ^
-  /home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-  struct android_app;
-         ^
-  19 errors generated.
-  [6/8] Building CXX object CMakeFiles/realms.dir/Renderer.cpp.o
-  [7/8] Building CXX object CMakeFiles/realms.dir/GltfScene.cpp.o
-  In file included from /home/runner/work/131/131/app/src/main/cpp/GltfScene.cpp:11:
-  In file included from /home/runner/work/131/131/app/src/main/cpp/third_party/tiny_gltf.h:1715:
-  /home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:5563:19: warning: 'char_traits<unsigned char>' is deprecated: char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in LLVM 18, so please migrate off of it. [-Wdeprecated-declarations]
-      typename std::char_traits<char_type>::int_type get_character()
+  15 warnings generated.
+  [8/8] Linking CXX shared library /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so
+  FAILED: /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so 
+  : && /usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -fPIC -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -shared -Wl,-soname,librealms.so -o /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so CMakeFiles/realms.dir/main.cpp.o CMakeFiles/realms.dir/AndroidOut.cpp.o CMakeFiles/realms.dir/Renderer.cpp.o CMakeFiles/realms.dir/TextureLoader.cpp.o CMakeFiles/realms.dir/ImageDecode.cpp.o CMakeFiles/realms.dir/GltfScene.cpp.o CMakeFiles/realms.dir/GltfRenderer.cpp.o  /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/libs/android.arm64-v8a/libgame-activity.a  -lEGL  -lGLESv3  -landroid  -llog  -latomic -lm && :
+  ld.lld: error: undefined symbol: android_app_swap_input_buffers
+  >>> referenced by Renderer.cpp:400 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:400)
+  >>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
+  
+  ld.lld: error: undefined symbol: android_app_clear_motion_events
+  >>> referenced by Renderer.cpp:403 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:403)
+  >>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
+  
+  ld.lld: error: undefined symbol: android_app_clear_key_events
+  >>> referenced by Renderer.cpp:403 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:403)
+  >>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
+  
+  ld.lld: error: undefined symbol: android_app_set_motion_event_filter
+  >>> referenced by main.cpp:40 (/home/runner/work/131/131/app/src/main/cpp/main.cpp:40)
+  >>>               CMakeFiles/realms.dir/main.cpp.o:(android_main)
+  clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+  ninja: build stopped: subcommand failed.
+  
+  C++ build system [build] failed while executing:
+      /usr/local/lib/android/sdk/cmake/3.22.1/bin/ninja \
+        -C \
+        /home/runner/work/131/131/app/.cxx/Debug/1e2g734d/arm64-v8a \
+        realms
+    from /home/runner/work/131/131/app
+
+* Try:
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
 --
-[4/8] Building CXX object CMakeFiles/realms.dir/GltfRenderer.cpp.o
-[5/8] Building CXX object CMakeFiles/realms.dir/main.cpp.o
-FAILED: CMakeFiles/realms.dir/main.cpp.o 
-/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Drealms_EXPORTS -isystem /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -MD -MT CMakeFiles/realms.dir/main.cpp.o -MF CMakeFiles/realms.dir/main.cpp.o.d -o CMakeFiles/realms.dir/main.cpp.o -c /home/runner/work/131/131/app/src/main/cpp/main.cpp
-/home/runner/work/131/131/app/src/main/cpp/main.cpp:10:49: error: member access into incomplete type 'android_app'
-    auto *renderer = static_cast<Renderer *>(app->userData);
-                                                ^
-/home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-struct android_app;
-       ^
-/home/runner/work/131/131/app/src/main/cpp/main.cpp:12:14: error: use of undeclared identifier 'APP_CMD_INIT_WINDOW'
-        case APP_CMD_INIT_WINDOW:
-             ^
-/home/runner/work/131/131/app/src/main/cpp/main.cpp:14:16: error: member access into incomplete type 'android_app'
-            app->userData = app->window ? new Renderer(app) : nullptr;
-               ^
-/home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-struct android_app;
-       ^
-/home/runner/work/131/131/app/src/main/cpp/main.cpp:14:32: error: member access into incomplete type 'android_app'
-            app->userData = app->window ? new Renderer(app) : nullptr;
-                               ^
-/home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-struct android_app;
-       ^
-/home/runner/work/131/131/app/src/main/cpp/main.cpp:16:14: error: use of undeclared identifier 'APP_CMD_TERM_WINDOW'
-        case APP_CMD_TERM_WINDOW:
-             ^
-/home/runner/work/131/131/app/src/main/cpp/main.cpp:18:16: error: member access into incomplete type 'android_app'
-            app->userData = nullptr;
-               ^
-/home/runner/work/131/131/app/src/main/cpp/Renderer.h:18:8: note: forward declaration of 'android_app'
-struct android_app;
-       ^
-/home/runner/work/131/131/app/src/main/cpp/main.cpp:20:14: error: use of undeclared identifier 'APP_CMD_GAINED_FOCUS'
-        case APP_CMD_GAINED_FOCUS:
-             ^
-/home/runner/work/131/131/app/src/main/cpp/main.cpp:24:14: error: use of undeclared identifier 'APP_CMD_LOST_FOCUS'
-        case APP_CMD_LOST_FOCUS:
-             ^
+15 warnings generated.
+[8/8] Linking CXX shared library /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so
+FAILED: /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so 
+: && /usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -fPIC -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -shared -Wl,-soname,librealms.so -o /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so CMakeFiles/realms.dir/main.cpp.o CMakeFiles/realms.dir/AndroidOut.cpp.o CMakeFiles/realms.dir/Renderer.cpp.o CMakeFiles/realms.dir/TextureLoader.cpp.o CMakeFiles/realms.dir/ImageDecode.cpp.o CMakeFiles/realms.dir/GltfScene.cpp.o CMakeFiles/realms.dir/GltfRenderer.cpp.o  /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/libs/android.arm64-v8a/libgame-activity.a  -lEGL  -lGLESv3  -landroid  -llog  -latomic -lm && :
+ld.lld: error: undefined symbol: android_app_swap_input_buffers
+>>> referenced by Renderer.cpp:400 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:400)
+>>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
+
+ld.lld: error: undefined symbol: android_app_clear_motion_events
+>>> referenced by Renderer.cpp:403 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:403)
+>>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
+
+ld.lld: error: undefined symbol: android_app_clear_key_events
+>>> referenced by Renderer.cpp:403 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:403)
+>>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
+
+ld.lld: error: undefined symbol: android_app_set_motion_event_filter
+>>> referenced by main.cpp:40 (/home/runner/work/131/131/app/src/main/cpp/main.cpp:40)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(android_main)
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.
+
+C++ build system [build] failed while executing:
+    /usr/local/lib/android/sdk/cmake/3.22.1/bin/ninja \
+      -C \
+      /home/runner/work/131/131/app/.cxx/Debug/1e2g734d/arm64-v8a \
+      realms
+  from /home/runner/work/131/131/app
+	at org.gradle.internal.UncheckedException.throwAsUncheckedException(UncheckedException.java:68)
+	at org.gradle.internal.UncheckedException.throwAsUncheckedException(UncheckedException.java:41)
+	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:128)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.doExecute(StandardTaskAction.java:58)
+--
+15 warnings generated.
+[8/8] Linking CXX shared library /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so
+FAILED: /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so 
+: && /usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -fPIC -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -shared -Wl,-soname,librealms.so -o /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so CMakeFiles/realms.dir/main.cpp.o CMakeFiles/realms.dir/AndroidOut.cpp.o CMakeFiles/realms.dir/Renderer.cpp.o CMakeFiles/realms.dir/TextureLoader.cpp.o CMakeFiles/realms.dir/ImageDecode.cpp.o CMakeFiles/realms.dir/GltfScene.cpp.o CMakeFiles/realms.dir/GltfRenderer.cpp.o  /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/libs/android.arm64-v8a/libgame-activity.a  -lEGL  -lGLESv3  -landroid  -llog  -latomic -lm && :
+ld.lld: error: undefined symbol: android_app_swap_input_buffers
+>>> referenced by Renderer.cpp:400 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:400)
+>>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
+
+ld.lld: error: undefined symbol: android_app_clear_motion_events
+>>> referenced by Renderer.cpp:403 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:403)
+>>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
+
+ld.lld: error: undefined symbol: android_app_clear_key_events
+>>> referenced by Renderer.cpp:403 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:403)
+>>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
+
+ld.lld: error: undefined symbol: android_app_set_motion_event_filter
+>>> referenced by main.cpp:40 (/home/runner/work/131/131/app/src/main/cpp/main.cpp:40)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(android_main)
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.
+
+C++ build system [build] failed while executing:
+    /usr/local/lib/android/sdk/cmake/3.22.1/bin/ninja \
+      -C \
+      /home/runner/work/131/131/app/.cxx/Debug/1e2g734d/arm64-v8a \
+      realms
+  from /home/runner/work/131/131/app
+	at com.android.build.gradle.internal.cxx.process.ExecuteProcessKt.execute(ExecuteProcess.kt:288)
+	at com.android.build.gradle.internal.cxx.process.ExecuteProcessKt$executeProcess$1.invoke(ExecuteProcess.kt:108)
+	at com.android.build.gradle.internal.cxx.process.ExecuteProcessKt$executeProcess$1.invoke(ExecuteProcess.kt:106)
+	at com.android.build.gradle.internal.cxx.timing.TimingEnvironmentKt.time(TimingEnvironment.kt:32)
 =================== TAIL ===================
 ninja: build stopped: subcommand failed.
 
@@ -287,5 +165,5 @@ Caused by: org.gradle.process.internal.ExecException: Process 'command '/usr/loc
 	... 137 more
 
 
-BUILD FAILED in 1m 56s
+BUILD FAILED in 1m 40s
 30 actionable tasks: 30 executed
