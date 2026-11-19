@@ -2,9 +2,10 @@
 #include "AndroidOut.h"
 #include "Renderer.h"
 #include <game-activity/GameActivity.h>
-#include <game-activity/native_app_glue/android_native_app_glue.h>
 
 extern "C" {
+#include <game-activity/native_app_glue/android_native_app_glue.c>
+
 
 static bool active = false;
 void handle_cmd(android_app *app, int32_t command) {
