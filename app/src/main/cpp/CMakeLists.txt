@@ -7,4 +7,5 @@ add_library(realms SHARED main.cpp AndroidOut.cpp Renderer.cpp TextureLoader.cpp
 target_include_directories(realms PRIVATE ga_shim)
 target_compile_features(realms PRIVATE cxx_std_17)
 find_package(game-activity REQUIRED CONFIG)
-target_link_libraries(realms game-activity::game-activity EGL GLESv3 android log)
+find_package(game-text-input REQUIRED CONFIG)
+target_link_libraries(realms game-activity::game-activity game-text-input::game-text-input EGL GLESv3 android log)
