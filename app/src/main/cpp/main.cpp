@@ -2,6 +2,7 @@
 #include "AndroidOut.h"
 #include "Renderer.h"
 #include <game-activity/GameActivity.h>
+#include <game-activity/native_app_glue/android_native_app_glue.h>
 
 extern "C" {
 
