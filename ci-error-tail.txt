@@ -1,0 +1,120 @@
+                           ^
+/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__string/char_traits.h:79:8: note: 'char_traits<unsigned char>' has been explicitly marked deprecated here
+struct _LIBCPP_DEPRECATED_("char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in LLVM 18, so please migrate off of it.")
+       ^
+/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__config:772:53: note: expanded from macro '_LIBCPP_DEPRECATED_'
+#      define _LIBCPP_DEPRECATED_(m) __attribute__((deprecated(m)))
+                                                    ^
+In file included from /home/runner/work/131/131/app/src/main/cpp/GltfScene.cpp:11:
+In file included from /home/runner/work/131/131/app/src/main/cpp/third_party/tiny_gltf.h:1715:
+/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:7926:43: warning: 'char_traits<unsigned char>' is deprecated: char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in LLVM 18, so please migrate off of it. [-Wdeprecated-declarations]
+            if (JSON_HEDLEY_UNLIKELY(std::char_traits<char_type>::to_char_type(get()) != literal_text[i]))
+                                          ^
+/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__string/char_traits.h:79:8: note: 'char_traits<unsigned char>' has been explicitly marked deprecated here
+struct _LIBCPP_DEPRECATED_("char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in LLVM 18, so please migrate off of it.")
+       ^
+/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__config:772:53: note: expanded from macro '_LIBCPP_DEPRECATED_'
+#      define _LIBCPP_DEPRECATED_(m) __attribute__((deprecated(m)))
+                                                    ^
+In file included from /home/runner/work/131/131/app/src/main/cpp/GltfScene.cpp:11:
+In file included from /home/runner/work/131/131/app/src/main/cpp/third_party/tiny_gltf.h:1715:
+/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:6888:27: warning: 'char_traits<unsigned char>' is deprecated: char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in LLVM 18, so please migrate off of it. [-Wdeprecated-declarations]
+                case std::char_traits<char_type>::eof():
+                          ^
+/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:8188:24: note: in instantiation of member function 'nlohmann::detail::lexer<nlohmann::basic_json<>, nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>>::scan_string' requested here
+                return scan_string();
+                       ^
+/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:11380:37: note: in instantiation of member function 'nlohmann::detail::lexer<nlohmann::basic_json<>, nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>>::scan' requested here
+        return last_token = m_lexer.scan();
+                                    ^
+/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:10997:9: note: in instantiation of member function 'nlohmann::detail::parser<nlohmann::basic_json<>, nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>>::get_token' requested here
+        get_token();
+        ^
+/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:17713:16: note: in instantiation of member function 'nlohmann::detail::parser<nlohmann::basic_json<>, nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>>::parser' requested here
+        return ::nlohmann::detail::parser<basic_json, InputAdapterType>(std::move(adapter),
+               ^
+/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:24443:9: note: in instantiation of function template specialization 'nlohmann::basic_json<>::parser<nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>>' requested here
+        parser(detail::input_adapter(std::move(first), std::move(last)), cb, allow_exceptions, ignore_comments).parse(true, result);
+        ^
+/home/runner/work/131/131/app/src/main/cpp/GltfScene.cpp:151:28: note: in instantiation of function template specialization 'nlohmann::basic_json<>::parse<std::__wrap_iter<unsigned char *>>' requested here
+    auto j=nlohmann::json::parse(bytes.begin()+offset,bytes.begin()+offset+length);
+                           ^
+/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__string/char_traits.h:79:8: note: 'char_traits<unsigned char>' has been explicitly marked deprecated here
+struct _LIBCPP_DEPRECATED_("char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in LLVM 18, so please migrate off of it.")
+       ^
+/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__config:772:53: note: expanded from macro '_LIBCPP_DEPRECATED_'
+#      define _LIBCPP_DEPRECATED_(m) __attribute__((deprecated(m)))
+                                                    ^
+In file included from /home/runner/work/131/131/app/src/main/cpp/GltfScene.cpp:11:
+In file included from /home/runner/work/131/131/app/src/main/cpp/third_party/tiny_gltf.h:1715:
+/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:7944:37: warning: 'char_traits<unsigned char>' is deprecated: char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in LLVM 18, so please migrate off of it. [-Wdeprecated-declarations]
+        token_string.push_back(std::char_traits<char_type>::to_char_type(current));
+                                    ^
+/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:6877:9: note: in instantiation of member function 'nlohmann::detail::lexer<nlohmann::basic_json<>, nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>>::reset' requested here
+        reset();
+        ^
+/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:8188:24: note: in instantiation of member function 'nlohmann::detail::lexer<nlohmann::basic_json<>, nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>>::scan_string' requested here
+                return scan_string();
+                       ^
+/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:11380:37: note: in instantiation of member function 'nlohmann::detail::lexer<nlohmann::basic_json<>, nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>>::scan' requested here
+        return last_token = m_lexer.scan();
+                                    ^
+/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:10997:9: note: in instantiation of member function 'nlohmann::detail::parser<nlohmann::basic_json<>, nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>>::get_token' requested here
+        get_token();
+        ^
+/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:17713:16: note: in instantiation of member function 'nlohmann::detail::parser<nlohmann::basic_json<>, nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>>::parser' requested here
+        return ::nlohmann::detail::parser<basic_json, InputAdapterType>(std::move(adapter),
+               ^
+/home/runner/work/131/131/app/src/main/cpp/third_party/json.hpp:24443:9: note: in instantiation of function template specialization 'nlohmann::basic_json<>::parser<nlohmann::detail::iterator_input_adapter<std::__wrap_iter<unsigned char *>>>' requested here
+        parser(detail::input_adapter(std::move(first), std::move(last)), cb, allow_exceptions, ignore_comments).parse(true, result);
+        ^
+/home/runner/work/131/131/app/src/main/cpp/GltfScene.cpp:151:28: note: in instantiation of function template specialization 'nlohmann::basic_json<>::parse<std::__wrap_iter<unsigned char *>>' requested here
+    auto j=nlohmann::json::parse(bytes.begin()+offset,bytes.begin()+offset+length);
+                           ^
+/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__string/char_traits.h:79:8: note: 'char_traits<unsigned char>' has been explicitly marked deprecated here
+struct _LIBCPP_DEPRECATED_("char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in LLVM 18, so please migrate off of it.")
+       ^
+/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__config:772:53: note: expanded from macro '_LIBCPP_DEPRECATED_'
+#      define _LIBCPP_DEPRECATED_(m) __attribute__((deprecated(m)))
+                                                    ^
+15 warnings generated.
+ninja: build stopped: subcommand failed.
+
+C++ build system [build] failed while executing:
+    /usr/local/lib/android/sdk/cmake/3.22.1/bin/ninja \
+      -C \
+      /home/runner/work/131/131/app/.cxx/Debug/1e2g734d/arm64-v8a \
+      realms
+  from /home/runner/work/131/131/app
+	at com.android.build.gradle.internal.cxx.process.ExecuteProcessKt.execute(ExecuteProcess.kt:288)
+	at com.android.build.gradle.internal.cxx.process.ExecuteProcessKt$executeProcess$1.invoke(ExecuteProcess.kt:108)
+	at com.android.build.gradle.internal.cxx.process.ExecuteProcessKt$executeProcess$1.invoke(ExecuteProcess.kt:106)
+	at com.android.build.gradle.internal.cxx.timing.TimingEnvironmentKt.time(TimingEnvironment.kt:32)
+	at com.android.build.gradle.internal.cxx.process.ExecuteProcessKt.executeProcess(ExecuteProcess.kt:106)
+	at com.android.build.gradle.internal.cxx.process.ExecuteProcessKt.executeProcess$default(ExecuteProcess.kt:85)
+	at com.android.build.gradle.internal.cxx.build.CxxRegularBuilder.executeProcessBatch(CxxRegularBuilder.kt:332)
+	at com.android.build.gradle.internal.cxx.build.CxxRegularBuilder.build(CxxRegularBuilder.kt:129)
+	at com.android.build.gradle.tasks.ExternalNativeBuildTask$doTaskAction$$inlined$recordTaskAction$1.invoke(BaseTask.kt:70)
+	at com.android.build.gradle.internal.tasks.Blocks.recordSpan(Blocks.java:51)
+	at com.android.build.gradle.tasks.ExternalNativeBuildTask.doTaskAction(ExternalNativeBuildTask.kt:145)
+	at com.android.build.gradle.internal.tasks.UnsafeOutputsTask$taskAction$$inlined$recordTaskAction$1.invoke(BaseTask.kt:65)
+	at com.android.build.gradle.internal.tasks.Blocks.recordSpan(Blocks.java:51)
+	at com.android.build.gradle.internal.tasks.UnsafeOutputsTask.taskAction(UnsafeOutputsTask.kt:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:125)
+	... 119 more
+Caused by: com.android.ide.common.process.ProcessException: Error while executing process /usr/local/lib/android/sdk/cmake/3.22.1/bin/ninja with arguments {-C /home/runner/work/131/131/app/.cxx/Debug/1e2g734d/arm64-v8a realms}
+	at com.android.build.gradle.internal.process.GradleProcessResult.buildProcessException(GradleProcessResult.java:73)
+	at com.android.build.gradle.internal.process.GradleProcessResult.assertNormalExitValue(GradleProcessResult.java:48)
+	at com.android.build.gradle.internal.cxx.process.ExecuteProcessKt.execute(ExecuteProcess.kt:277)
+	... 136 more
+Caused by: org.gradle.process.internal.ExecException: Process 'command '/usr/local/lib/android/sdk/cmake/3.22.1/bin/ninja'' finished with non-zero exit value 1
+	at org.gradle.process.internal.DefaultExecHandle$ExecResultImpl.assertNormalExitValue(DefaultExecHandle.java:442)
+	at com.android.build.gradle.internal.process.GradleProcessResult.assertNormalExitValue(GradleProcessResult.java:46)
+	... 137 more
+
+
+BUILD FAILED in 1m 42s
+26 actionable tasks: 26 executed
