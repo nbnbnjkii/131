@@ -2,18 +2,9 @@ C/C++: #      define _LIBCPP_DEPRECATED_(m) __attribute__((deprecated(m)))
 C/C++:                                                     ^
 C/C++: 15 warnings generated.
 C/C++: : && /usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -fPIC -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -shared -Wl,-soname,librealms.so -o /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so CMakeFiles/realms.dir/main.cpp.o CMakeFiles/realms.dir/AndroidOut.cpp.o CMakeFiles/realms.dir/Renderer.cpp.o CMakeFiles/realms.dir/TextureLoader.cpp.o CMakeFiles/realms.dir/ImageDecode.cpp.o CMakeFiles/realms.dir/GltfScene.cpp.o CMakeFiles/realms.dir/GltfRenderer.cpp.o  /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/libs/android.arm64-v8a/libgame-activity.a  -lEGL  -lGLESv3  -landroid  -llog  -latomic -lm && :
-C/C++: ld.lld: error: undefined symbol: android_app_swap_input_buffers
-C/C++: >>> referenced by Renderer.cpp:400 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:400)
-C/C++: >>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
-C/C++: ld.lld: error: undefined symbol: android_app_clear_motion_events
-C/C++: >>> referenced by Renderer.cpp:403 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:403)
-C/C++: >>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
-C/C++: ld.lld: error: undefined symbol: android_app_clear_key_events
-C/C++: >>> referenced by Renderer.cpp:403 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:403)
-C/C++: >>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
-C/C++: ld.lld: error: undefined symbol: android_app_set_motion_event_filter
-C/C++: >>> referenced by main.cpp:40 (/home/runner/work/131/131/app/src/main/cpp/main.cpp:40)
-C/C++: >>>               CMakeFiles/realms.dir/main.cpp.o:(android_main)
+C/C++: ld.lld: error: undefined symbol: GameActivityMotionEvent_destroy
+C/C++: >>> referenced by android_native_app_glue.c:541 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/native_app_glue/android_native_app_glue.c:541)
+C/C++: >>>               CMakeFiles/realms.dir/main.cpp.o:(android_app_clear_motion_events)
 C/C++: clang++: error: linker command failed with exit code 1 (use -v to see invocation)
 C/C++: ninja: build stopped: subcommand failed.
 
@@ -24,29 +15,17 @@ FAILURE: Build failed with an exception.
 * What went wrong:
 Execution failed for task ':app:buildCMakeDebug[arm64-v8a]'.
 > com.android.ide.common.process.ProcessException: ninja: Entering directory `/home/runner/work/131/131/app/.cxx/Debug/1e2g734d/arm64-v8a'
-  [1/8] Building CXX object CMakeFiles/realms.dir/TextureLoader.cpp.o
-  [2/8] Building CXX object CMakeFiles/realms.dir/ImageDecode.cpp.o
+  [1/8] Building CXX object CMakeFiles/realms.dir/ImageDecode.cpp.o
+  [2/8] Building CXX object CMakeFiles/realms.dir/TextureLoader.cpp.o
   [3/8] Building CXX object CMakeFiles/realms.dir/AndroidOut.cpp.o
 --
   15 warnings generated.
   [8/8] Linking CXX shared library /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so
   FAILED: /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so 
   : && /usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -fPIC -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -shared -Wl,-soname,librealms.so -o /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so CMakeFiles/realms.dir/main.cpp.o CMakeFiles/realms.dir/AndroidOut.cpp.o CMakeFiles/realms.dir/Renderer.cpp.o CMakeFiles/realms.dir/TextureLoader.cpp.o CMakeFiles/realms.dir/ImageDecode.cpp.o CMakeFiles/realms.dir/GltfScene.cpp.o CMakeFiles/realms.dir/GltfRenderer.cpp.o  /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/libs/android.arm64-v8a/libgame-activity.a  -lEGL  -lGLESv3  -landroid  -llog  -latomic -lm && :
-  ld.lld: error: undefined symbol: android_app_swap_input_buffers
-  >>> referenced by Renderer.cpp:400 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:400)
-  >>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
-  
-  ld.lld: error: undefined symbol: android_app_clear_motion_events
-  >>> referenced by Renderer.cpp:403 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:403)
-  >>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
-  
-  ld.lld: error: undefined symbol: android_app_clear_key_events
-  >>> referenced by Renderer.cpp:403 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:403)
-  >>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
-  
-  ld.lld: error: undefined symbol: android_app_set_motion_event_filter
-  >>> referenced by main.cpp:40 (/home/runner/work/131/131/app/src/main/cpp/main.cpp:40)
-  >>>               CMakeFiles/realms.dir/main.cpp.o:(android_main)
+  ld.lld: error: undefined symbol: GameActivityMotionEvent_destroy
+  >>> referenced by android_native_app_glue.c:541 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/native_app_glue/android_native_app_glue.c:541)
+  >>>               CMakeFiles/realms.dir/main.cpp.o:(android_app_clear_motion_events)
   clang++: error: linker command failed with exit code 1 (use -v to see invocation)
   ninja: build stopped: subcommand failed.
   
@@ -65,21 +44,9 @@ Execution failed for task ':app:buildCMakeDebug[arm64-v8a]'.
 [8/8] Linking CXX shared library /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so
 FAILED: /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so 
 : && /usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -fPIC -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -shared -Wl,-soname,librealms.so -o /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so CMakeFiles/realms.dir/main.cpp.o CMakeFiles/realms.dir/AndroidOut.cpp.o CMakeFiles/realms.dir/Renderer.cpp.o CMakeFiles/realms.dir/TextureLoader.cpp.o CMakeFiles/realms.dir/ImageDecode.cpp.o CMakeFiles/realms.dir/GltfScene.cpp.o CMakeFiles/realms.dir/GltfRenderer.cpp.o  /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/libs/android.arm64-v8a/libgame-activity.a  -lEGL  -lGLESv3  -landroid  -llog  -latomic -lm && :
-ld.lld: error: undefined symbol: android_app_swap_input_buffers
->>> referenced by Renderer.cpp:400 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:400)
->>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
-
-ld.lld: error: undefined symbol: android_app_clear_motion_events
->>> referenced by Renderer.cpp:403 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:403)
->>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
-
-ld.lld: error: undefined symbol: android_app_clear_key_events
->>> referenced by Renderer.cpp:403 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:403)
->>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
-
-ld.lld: error: undefined symbol: android_app_set_motion_event_filter
->>> referenced by main.cpp:40 (/home/runner/work/131/131/app/src/main/cpp/main.cpp:40)
->>>               CMakeFiles/realms.dir/main.cpp.o:(android_main)
+ld.lld: error: undefined symbol: GameActivityMotionEvent_destroy
+>>> referenced by android_native_app_glue.c:541 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/native_app_glue/android_native_app_glue.c:541)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(android_app_clear_motion_events)
 clang++: error: linker command failed with exit code 1 (use -v to see invocation)
 ninja: build stopped: subcommand failed.
 
@@ -98,21 +65,9 @@ C++ build system [build] failed while executing:
 [8/8] Linking CXX shared library /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so
 FAILED: /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so 
 : && /usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -fPIC -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -shared -Wl,-soname,librealms.so -o /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so CMakeFiles/realms.dir/main.cpp.o CMakeFiles/realms.dir/AndroidOut.cpp.o CMakeFiles/realms.dir/Renderer.cpp.o CMakeFiles/realms.dir/TextureLoader.cpp.o CMakeFiles/realms.dir/ImageDecode.cpp.o CMakeFiles/realms.dir/GltfScene.cpp.o CMakeFiles/realms.dir/GltfRenderer.cpp.o  /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/libs/android.arm64-v8a/libgame-activity.a  -lEGL  -lGLESv3  -landroid  -llog  -latomic -lm && :
-ld.lld: error: undefined symbol: android_app_swap_input_buffers
->>> referenced by Renderer.cpp:400 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:400)
->>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
-
-ld.lld: error: undefined symbol: android_app_clear_motion_events
->>> referenced by Renderer.cpp:403 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:403)
->>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
-
-ld.lld: error: undefined symbol: android_app_clear_key_events
->>> referenced by Renderer.cpp:403 (/home/runner/work/131/131/app/src/main/cpp/Renderer.cpp:403)
->>>               CMakeFiles/realms.dir/Renderer.cpp.o:(Renderer::handleInput())
-
-ld.lld: error: undefined symbol: android_app_set_motion_event_filter
->>> referenced by main.cpp:40 (/home/runner/work/131/131/app/src/main/cpp/main.cpp:40)
->>>               CMakeFiles/realms.dir/main.cpp.o:(android_main)
+ld.lld: error: undefined symbol: GameActivityMotionEvent_destroy
+>>> referenced by android_native_app_glue.c:541 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/native_app_glue/android_native_app_glue.c:541)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(android_app_clear_motion_events)
 clang++: error: linker command failed with exit code 1 (use -v to see invocation)
 ninja: build stopped: subcommand failed.
 
@@ -165,5 +120,5 @@ Caused by: org.gradle.process.internal.ExecException: Process 'command '/usr/loc
 	... 137 more
 
 
-BUILD FAILED in 1m 40s
-30 actionable tasks: 30 executed
+BUILD FAILED in 1m 37s
+26 actionable tasks: 26 executed
