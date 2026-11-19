@@ -32,6 +32,7 @@ std::atomic<float> stickRight{0},stickForward{0};
 std::atomic<bool> gameplayReady{false};
 std::atomic<int> currentTool{0},currentSelection{0},currentSurface{-1},interactionAction{0},freezeState{0};
 std::atomic<int> droneMode{0};
+std::atomic<bool> droneExplodedFlag{false};
 std::atomic<float> droneThrottle{0},droneYawInput{0},dronePitchInput{0},droneRollInput{0};
 std::atomic<bool> holdingObject{false};
 std::mutex snapshotMutex;
@@ -193,7 +194,7 @@ extern "C" JNIEXPORT void JNICALL Java_com_example_realms_MainActivity_nativeVer
  verticalInput=std::isfinite(value)?std::clamp(value,-1.f,1.f):0.f;
 }
 extern "C" JNIEXPORT jfloat JNICALL Java_com_example_realms_MainActivity_nativeDroneExploded(JNIEnv*,jobject){
- return drone_.exploded?1.f:0.f;
+ return droneExplodedFlag.load()?1.f:0.f;
 }
 
 Renderer::Renderer(android_app *app):app_(app),last_(std::chrono::steady_clock::now()){
@@ -493,7 +494,7 @@ void Renderer::render(){
   if(tools_.tool==sandbox::HandTool::DRONE_REMOTE&&!drone_.piloting()&&((drone_.linked&&(drone_.mode==sandbox::FpvDrone::Hover||drone_.mode==sandbox::FpvDrone::Ground||drone_.mode==sandbox::FpvDrone::Returning))||drone_.aimed({world_.x,world_.y,world_.z},world_.yaw,world_.pitch,*city_.scene().collision,builtCollision_)))interactionAction=6;
  }
  if(city_.ready()&&drone_.outsideView()&&drone_.piloting())drone_.updateChase(*city_.scene().collision,builtCollision_);
- droneMode=int(drone_.mode);
+ droneMode=int(drone_.mode);droneExplodedFlag=drone_.exploded;
  physics::Vec3 cameraEye;float cameraYaw,cameraPitch;
  if(drone_.piloting()){cameraEye=drone_.camera();cameraYaw=drone_.viewYaw();cameraPitch=drone_.viewPitch();}
  else if(thirdPerson_&&city_.ready()){
@@ -625,6 +626,7 @@ void Renderer::render(){
   auto rotate=[&](physics::Vec3 p){float cr=std::cos(drone_.roll),sr=std::sin(drone_.roll),cp=std::cos(drone_.pitch),sp=std::sin(drone_.pitch),cy=std::cos(drone_.yaw),sy=std::sin(drone_.yaw);
    float x=cr*p.x+sr*p.y,y=-sr*p.x+cr*p.y,z=sp*y+cp*p.z;y=cp*y-sp*p.z;return physics::Vec3{cy*x+sy*z,y,-sy*x+cy*z};};
   auto x=rotate({1,0,0}),y=rotate({0,1,0}),z=rotate({0,0,1}),t=drone_.position-rotate(center);
+  const float matrix[16]={x.x,x.y,x.z,0,y.x,y.y,y.z,0,z.x,z.y,z.z,0,t.x,t.y,t.z,1};
   glUniformMatrix4fv(glGetUniformLocation(program_,"objectTransform"),1,GL_FALSE,matrix);
   if(!drone_.exploded){
    droneModel_.draw(program_,cameraEye.x,cameraEye.z);
@@ -665,7 +667,6 @@ void Renderer::render(){
     }
    }
   }
- }
  }
  // Viewmodel uses camera-local coordinates and its own depth range, not a
  // world object: it cannot collide with a wall or drift when looking around.
