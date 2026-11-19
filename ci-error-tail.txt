@@ -1,10 +1,54 @@
 C/C++: #      define _LIBCPP_DEPRECATED_(m) __attribute__((deprecated(m)))
 C/C++:                                                     ^
 C/C++: 15 warnings generated.
-C/C++: : && /usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -fPIC -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -shared -Wl,-soname,librealms.so -o /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so CMakeFiles/realms.dir/main.cpp.o CMakeFiles/realms.dir/AndroidOut.cpp.o CMakeFiles/realms.dir/Renderer.cpp.o CMakeFiles/realms.dir/TextureLoader.cpp.o CMakeFiles/realms.dir/ImageDecode.cpp.o CMakeFiles/realms.dir/GltfScene.cpp.o CMakeFiles/realms.dir/GltfRenderer.cpp.o  /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/libs/android.arm64-v8a/libgame-activity.a  -lEGL  -lGLESv3  -landroid  -llog  -latomic -lm && :
+C/C++: : && /usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -fPIC -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -shared -Wl,-soname,librealms.so -o /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so CMakeFiles/realms.dir/main.cpp.o CMakeFiles/realms.dir/AndroidOut.cpp.o CMakeFiles/realms.dir/Renderer.cpp.o CMakeFiles/realms.dir/TextureLoader.cpp.o CMakeFiles/realms.dir/ImageDecode.cpp.o CMakeFiles/realms.dir/GltfScene.cpp.o CMakeFiles/realms.dir/GltfRenderer.cpp.o CMakeFiles/realms.dir/ga_shim/system_utils.cpp.o  /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/libs/android.arm64-v8a/libgame-activity.a  -lEGL  -lGLESv3  -landroid  -llog  -latomic -lm && :
+C/C++: ld.lld: error: undefined symbol: GameTextInput_getState
+C/C++: >>> referenced by GameActivity.cpp:329 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:329)
+C/C++: >>>               CMakeFiles/realms.dir/main.cpp.o:(GameActivity_getTextInputState)
+C/C++: ld.lld: error: undefined symbol: GameActivityEventsInit
+C/C++: >>> referenced by GameActivity.cpp:1215 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:1215)
+C/C++: >>>               CMakeFiles/realms.dir/main.cpp.o:(GameActivity_register)
+C/C++: ld.lld: error: undefined symbol: GameTextInput_init
+C/C++: >>> referenced by GameActivity.cpp:513 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:513)
+C/C++: >>>               CMakeFiles/realms.dir/main.cpp.o:(initializeNativeCode_native(_JNIEnv*, _jobject*, _jstring*, _jstring*, _jstring*, _jobject*, _jbyteArray*, _jobject*))
+C/C++: ld.lld: error: undefined symbol: GameTextInput_setEventCallback
+C/C++: >>> referenced by GameActivity.cpp:514 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:514)
+C/C++: >>>               CMakeFiles/realms.dir/main.cpp.o:(initializeNativeCode_native(_JNIEnv*, _jobject*, _jstring*, _jstring*, _jstring*, _jobject*, _jbyteArray*, _jobject*))
 C/C++: ld.lld: error: undefined symbol: GameActivityMotionEvent_destroy
 C/C++: >>> referenced by android_native_app_glue.c:541 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/native_app_glue/android_native_app_glue.c:541)
 C/C++: >>>               CMakeFiles/realms.dir/main.cpp.o:(android_app_clear_motion_events)
+C/C++: ld.lld: error: undefined symbol: GameActivityMotionEvent_fromJava
+C/C++: >>> referenced by GameActivity.cpp:908 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:908)
+C/C++: >>>               CMakeFiles/realms.dir/main.cpp.o:(onTouchEvent_native(_JNIEnv*, _jobject*, long, _jobject*, int, int, int, int, int, long, long, int, int, int, int, int, int, float, float))
+C/C++: ld.lld: error: undefined symbol: GameActivityKeyEvent_fromJava
+C/C++: >>> referenced by GameActivity.cpp:931 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:931)
+C/C++: >>>               CMakeFiles/realms.dir/main.cpp.o:(onKeyDown_native(_JNIEnv*, _jobject*, long, _jobject*))
+C/C++: >>> referenced by GameActivity.cpp:920 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:920)
+C/C++: >>>               CMakeFiles/realms.dir/main.cpp.o:(onKeyUp_native(_JNIEnv*, _jobject*, long, _jobject*))
+C/C++: ld.lld: error: undefined symbol: GameTextInput_processEvent
+C/C++: >>> referenced by GameActivity.cpp:939 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:939)
+C/C++: >>>               CMakeFiles/realms.dir/main.cpp.o:(onTextInput_native(_JNIEnv*, _jobject*, long, _jobject*))
+C/C++: ld.lld: error: undefined symbol: GameTextInput_processImeInsets
+C/C++: >>> referenced by GameActivity.cpp:975 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:975)
+C/C++: >>>               CMakeFiles/realms.dir/main.cpp.o:(onWindowInsetsChanged_native(_JNIEnv*, _jobject*, long))
+C/C++: ld.lld: error: undefined symbol: GameTextInput_setInputConnection
+C/C++: >>> referenced by GameActivity.cpp:983 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:983)
+C/C++: >>>               CMakeFiles/realms.dir/main.cpp.o:(setInputConnection_native(_JNIEnv*, _jobject*, long, _jobject*))
+C/C++: ld.lld: error: undefined symbol: GameTextInput_destroy
+C/C++: >>> referenced by GameActivity.cpp:241 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:241)
+C/C++: >>>               CMakeFiles/realms.dir/main.cpp.o:(NativeCode::~NativeCode())
+C/C++: ld.lld: error: undefined symbol: GameTextInput_showIme
+C/C++: >>> referenced by GameActivity.cpp:397 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:397)
+C/C++: >>>               CMakeFiles/realms.dir/main.cpp.o:(mainWorkCallback(int, int, void*))
+C/C++: ld.lld: error: undefined symbol: GameTextInput_setState
+C/C++: >>> referenced by GameActivity.cpp:401 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:401)
+C/C++: >>>               CMakeFiles/realms.dir/main.cpp.o:(mainWorkCallback(int, int, void*))
+C/C++: ld.lld: error: undefined symbol: GameTextInput_hideIme
+C/C++: >>> referenced by GameActivity.cpp:406 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:406)
+C/C++: >>>               CMakeFiles/realms.dir/main.cpp.o:(mainWorkCallback(int, int, void*))
+C/C++: ld.lld: error: undefined symbol: GameTextInput_restartInput
+C/C++: >>> referenced by GameActivity.cpp:418 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:418)
+C/C++: >>>               CMakeFiles/realms.dir/main.cpp.o:(mainWorkCallback(int, int, void*))
 C/C++: clang++: error: linker command failed with exit code 1 (use -v to see invocation)
 C/C++: ninja: build stopped: subcommand failed.
 
@@ -15,17 +59,75 @@ FAILURE: Build failed with an exception.
 * What went wrong:
 Execution failed for task ':app:buildCMakeDebug[arm64-v8a]'.
 > com.android.ide.common.process.ProcessException: ninja: Entering directory `/home/runner/work/131/131/app/.cxx/Debug/1e2g734d/arm64-v8a'
-  [1/8] Building CXX object CMakeFiles/realms.dir/ImageDecode.cpp.o
-  [2/8] Building CXX object CMakeFiles/realms.dir/TextureLoader.cpp.o
-  [3/8] Building CXX object CMakeFiles/realms.dir/AndroidOut.cpp.o
+  [1/9] Building CXX object CMakeFiles/realms.dir/TextureLoader.cpp.o
+  [2/9] Building CXX object CMakeFiles/realms.dir/ImageDecode.cpp.o
+  [3/9] Building CXX object CMakeFiles/realms.dir/AndroidOut.cpp.o
 --
   15 warnings generated.
-  [8/8] Linking CXX shared library /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so
+  [9/9] Linking CXX shared library /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so
   FAILED: /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so 
-  : && /usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -fPIC -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -shared -Wl,-soname,librealms.so -o /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so CMakeFiles/realms.dir/main.cpp.o CMakeFiles/realms.dir/AndroidOut.cpp.o CMakeFiles/realms.dir/Renderer.cpp.o CMakeFiles/realms.dir/TextureLoader.cpp.o CMakeFiles/realms.dir/ImageDecode.cpp.o CMakeFiles/realms.dir/GltfScene.cpp.o CMakeFiles/realms.dir/GltfRenderer.cpp.o  /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/libs/android.arm64-v8a/libgame-activity.a  -lEGL  -lGLESv3  -landroid  -llog  -latomic -lm && :
+  : && /usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -fPIC -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -shared -Wl,-soname,librealms.so -o /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so CMakeFiles/realms.dir/main.cpp.o CMakeFiles/realms.dir/AndroidOut.cpp.o CMakeFiles/realms.dir/Renderer.cpp.o CMakeFiles/realms.dir/TextureLoader.cpp.o CMakeFiles/realms.dir/ImageDecode.cpp.o CMakeFiles/realms.dir/GltfScene.cpp.o CMakeFiles/realms.dir/GltfRenderer.cpp.o CMakeFiles/realms.dir/ga_shim/system_utils.cpp.o  /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/libs/android.arm64-v8a/libgame-activity.a  -lEGL  -lGLESv3  -landroid  -llog  -latomic -lm && :
+  ld.lld: error: undefined symbol: GameTextInput_getState
+  >>> referenced by GameActivity.cpp:329 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:329)
+  >>>               CMakeFiles/realms.dir/main.cpp.o:(GameActivity_getTextInputState)
+  
+  ld.lld: error: undefined symbol: GameActivityEventsInit
+  >>> referenced by GameActivity.cpp:1215 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:1215)
+  >>>               CMakeFiles/realms.dir/main.cpp.o:(GameActivity_register)
+  
+  ld.lld: error: undefined symbol: GameTextInput_init
+  >>> referenced by GameActivity.cpp:513 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:513)
+  >>>               CMakeFiles/realms.dir/main.cpp.o:(initializeNativeCode_native(_JNIEnv*, _jobject*, _jstring*, _jstring*, _jstring*, _jobject*, _jbyteArray*, _jobject*))
+  
+  ld.lld: error: undefined symbol: GameTextInput_setEventCallback
+  >>> referenced by GameActivity.cpp:514 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:514)
+  >>>               CMakeFiles/realms.dir/main.cpp.o:(initializeNativeCode_native(_JNIEnv*, _jobject*, _jstring*, _jstring*, _jstring*, _jobject*, _jbyteArray*, _jobject*))
+  
   ld.lld: error: undefined symbol: GameActivityMotionEvent_destroy
   >>> referenced by android_native_app_glue.c:541 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/native_app_glue/android_native_app_glue.c:541)
   >>>               CMakeFiles/realms.dir/main.cpp.o:(android_app_clear_motion_events)
+  
+  ld.lld: error: undefined symbol: GameActivityMotionEvent_fromJava
+  >>> referenced by GameActivity.cpp:908 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:908)
+  >>>               CMakeFiles/realms.dir/main.cpp.o:(onTouchEvent_native(_JNIEnv*, _jobject*, long, _jobject*, int, int, int, int, int, long, long, int, int, int, int, int, int, float, float))
+  
+  ld.lld: error: undefined symbol: GameActivityKeyEvent_fromJava
+  >>> referenced by GameActivity.cpp:931 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:931)
+  >>>               CMakeFiles/realms.dir/main.cpp.o:(onKeyDown_native(_JNIEnv*, _jobject*, long, _jobject*))
+  >>> referenced by GameActivity.cpp:920 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:920)
+  >>>               CMakeFiles/realms.dir/main.cpp.o:(onKeyUp_native(_JNIEnv*, _jobject*, long, _jobject*))
+  
+  ld.lld: error: undefined symbol: GameTextInput_processEvent
+  >>> referenced by GameActivity.cpp:939 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:939)
+  >>>               CMakeFiles/realms.dir/main.cpp.o:(onTextInput_native(_JNIEnv*, _jobject*, long, _jobject*))
+  
+  ld.lld: error: undefined symbol: GameTextInput_processImeInsets
+  >>> referenced by GameActivity.cpp:975 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:975)
+  >>>               CMakeFiles/realms.dir/main.cpp.o:(onWindowInsetsChanged_native(_JNIEnv*, _jobject*, long))
+  
+  ld.lld: error: undefined symbol: GameTextInput_setInputConnection
+  >>> referenced by GameActivity.cpp:983 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:983)
+  >>>               CMakeFiles/realms.dir/main.cpp.o:(setInputConnection_native(_JNIEnv*, _jobject*, long, _jobject*))
+  
+  ld.lld: error: undefined symbol: GameTextInput_destroy
+  >>> referenced by GameActivity.cpp:241 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:241)
+  >>>               CMakeFiles/realms.dir/main.cpp.o:(NativeCode::~NativeCode())
+  
+  ld.lld: error: undefined symbol: GameTextInput_showIme
+  >>> referenced by GameActivity.cpp:397 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:397)
+  >>>               CMakeFiles/realms.dir/main.cpp.o:(mainWorkCallback(int, int, void*))
+  
+  ld.lld: error: undefined symbol: GameTextInput_setState
+  >>> referenced by GameActivity.cpp:401 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:401)
+  >>>               CMakeFiles/realms.dir/main.cpp.o:(mainWorkCallback(int, int, void*))
+  
+  ld.lld: error: undefined symbol: GameTextInput_hideIme
+  >>> referenced by GameActivity.cpp:406 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:406)
+  >>>               CMakeFiles/realms.dir/main.cpp.o:(mainWorkCallback(int, int, void*))
+  
+  ld.lld: error: undefined symbol: GameTextInput_restartInput
+  >>> referenced by GameActivity.cpp:418 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:418)
+  >>>               CMakeFiles/realms.dir/main.cpp.o:(mainWorkCallback(int, int, void*))
   clang++: error: linker command failed with exit code 1 (use -v to see invocation)
   ninja: build stopped: subcommand failed.
   
@@ -41,12 +143,70 @@ Execution failed for task ':app:buildCMakeDebug[arm64-v8a]'.
 > Run with --scan to get full insights.
 --
 15 warnings generated.
-[8/8] Linking CXX shared library /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so
+[9/9] Linking CXX shared library /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so
 FAILED: /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so 
-: && /usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -fPIC -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -shared -Wl,-soname,librealms.so -o /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so CMakeFiles/realms.dir/main.cpp.o CMakeFiles/realms.dir/AndroidOut.cpp.o CMakeFiles/realms.dir/Renderer.cpp.o CMakeFiles/realms.dir/TextureLoader.cpp.o CMakeFiles/realms.dir/ImageDecode.cpp.o CMakeFiles/realms.dir/GltfScene.cpp.o CMakeFiles/realms.dir/GltfRenderer.cpp.o  /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/libs/android.arm64-v8a/libgame-activity.a  -lEGL  -lGLESv3  -landroid  -llog  -latomic -lm && :
+: && /usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -fPIC -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -shared -Wl,-soname,librealms.so -o /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so CMakeFiles/realms.dir/main.cpp.o CMakeFiles/realms.dir/AndroidOut.cpp.o CMakeFiles/realms.dir/Renderer.cpp.o CMakeFiles/realms.dir/TextureLoader.cpp.o CMakeFiles/realms.dir/ImageDecode.cpp.o CMakeFiles/realms.dir/GltfScene.cpp.o CMakeFiles/realms.dir/GltfRenderer.cpp.o CMakeFiles/realms.dir/ga_shim/system_utils.cpp.o  /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/libs/android.arm64-v8a/libgame-activity.a  -lEGL  -lGLESv3  -landroid  -llog  -latomic -lm && :
+ld.lld: error: undefined symbol: GameTextInput_getState
+>>> referenced by GameActivity.cpp:329 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:329)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(GameActivity_getTextInputState)
+
+ld.lld: error: undefined symbol: GameActivityEventsInit
+>>> referenced by GameActivity.cpp:1215 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:1215)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(GameActivity_register)
+
+ld.lld: error: undefined symbol: GameTextInput_init
+>>> referenced by GameActivity.cpp:513 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:513)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(initializeNativeCode_native(_JNIEnv*, _jobject*, _jstring*, _jstring*, _jstring*, _jobject*, _jbyteArray*, _jobject*))
+
+ld.lld: error: undefined symbol: GameTextInput_setEventCallback
+>>> referenced by GameActivity.cpp:514 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:514)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(initializeNativeCode_native(_JNIEnv*, _jobject*, _jstring*, _jstring*, _jstring*, _jobject*, _jbyteArray*, _jobject*))
+
 ld.lld: error: undefined symbol: GameActivityMotionEvent_destroy
 >>> referenced by android_native_app_glue.c:541 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/native_app_glue/android_native_app_glue.c:541)
 >>>               CMakeFiles/realms.dir/main.cpp.o:(android_app_clear_motion_events)
+
+ld.lld: error: undefined symbol: GameActivityMotionEvent_fromJava
+>>> referenced by GameActivity.cpp:908 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:908)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(onTouchEvent_native(_JNIEnv*, _jobject*, long, _jobject*, int, int, int, int, int, long, long, int, int, int, int, int, int, float, float))
+
+ld.lld: error: undefined symbol: GameActivityKeyEvent_fromJava
+>>> referenced by GameActivity.cpp:931 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:931)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(onKeyDown_native(_JNIEnv*, _jobject*, long, _jobject*))
+>>> referenced by GameActivity.cpp:920 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:920)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(onKeyUp_native(_JNIEnv*, _jobject*, long, _jobject*))
+
+ld.lld: error: undefined symbol: GameTextInput_processEvent
+>>> referenced by GameActivity.cpp:939 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:939)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(onTextInput_native(_JNIEnv*, _jobject*, long, _jobject*))
+
+ld.lld: error: undefined symbol: GameTextInput_processImeInsets
+>>> referenced by GameActivity.cpp:975 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:975)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(onWindowInsetsChanged_native(_JNIEnv*, _jobject*, long))
+
+ld.lld: error: undefined symbol: GameTextInput_setInputConnection
+>>> referenced by GameActivity.cpp:983 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:983)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(setInputConnection_native(_JNIEnv*, _jobject*, long, _jobject*))
+
+ld.lld: error: undefined symbol: GameTextInput_destroy
+>>> referenced by GameActivity.cpp:241 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:241)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(NativeCode::~NativeCode())
+
+ld.lld: error: undefined symbol: GameTextInput_showIme
+>>> referenced by GameActivity.cpp:397 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:397)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(mainWorkCallback(int, int, void*))
+
+ld.lld: error: undefined symbol: GameTextInput_setState
+>>> referenced by GameActivity.cpp:401 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:401)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(mainWorkCallback(int, int, void*))
+
+ld.lld: error: undefined symbol: GameTextInput_hideIme
+>>> referenced by GameActivity.cpp:406 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:406)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(mainWorkCallback(int, int, void*))
+
+ld.lld: error: undefined symbol: GameTextInput_restartInput
+>>> referenced by GameActivity.cpp:418 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:418)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(mainWorkCallback(int, int, void*))
 clang++: error: linker command failed with exit code 1 (use -v to see invocation)
 ninja: build stopped: subcommand failed.
 
@@ -62,25 +222,32 @@ C++ build system [build] failed while executing:
 	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.doExecute(StandardTaskAction.java:58)
 --
 15 warnings generated.
-[8/8] Linking CXX shared library /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so
+[9/9] Linking CXX shared library /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so
 FAILED: /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so 
-: && /usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -fPIC -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -shared -Wl,-soname,librealms.so -o /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so CMakeFiles/realms.dir/main.cpp.o CMakeFiles/realms.dir/AndroidOut.cpp.o CMakeFiles/realms.dir/Renderer.cpp.o CMakeFiles/realms.dir/TextureLoader.cpp.o CMakeFiles/realms.dir/ImageDecode.cpp.o CMakeFiles/realms.dir/GltfScene.cpp.o CMakeFiles/realms.dir/GltfRenderer.cpp.o  /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/libs/android.arm64-v8a/libgame-activity.a  -lEGL  -lGLESv3  -landroid  -llog  -latomic -lm && :
+: && /usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android30 --sysroot=/usr/local/lib/android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-x86_64/sysroot -fPIC -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -shared -Wl,-soname,librealms.so -o /home/runner/work/131/131/app/build/intermediates/cxx/Debug/1e2g734d/obj/arm64-v8a/librealms.so CMakeFiles/realms.dir/main.cpp.o CMakeFiles/realms.dir/AndroidOut.cpp.o CMakeFiles/realms.dir/Renderer.cpp.o CMakeFiles/realms.dir/TextureLoader.cpp.o CMakeFiles/realms.dir/ImageDecode.cpp.o CMakeFiles/realms.dir/GltfScene.cpp.o CMakeFiles/realms.dir/GltfRenderer.cpp.o CMakeFiles/realms.dir/ga_shim/system_utils.cpp.o  /home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/libs/android.arm64-v8a/libgame-activity.a  -lEGL  -lGLESv3  -landroid  -llog  -latomic -lm && :
+ld.lld: error: undefined symbol: GameTextInput_getState
+>>> referenced by GameActivity.cpp:329 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:329)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(GameActivity_getTextInputState)
+
+ld.lld: error: undefined symbol: GameActivityEventsInit
+>>> referenced by GameActivity.cpp:1215 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:1215)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(GameActivity_register)
+
+ld.lld: error: undefined symbol: GameTextInput_init
+>>> referenced by GameActivity.cpp:513 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:513)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(initializeNativeCode_native(_JNIEnv*, _jobject*, _jstring*, _jstring*, _jstring*, _jobject*, _jbyteArray*, _jobject*))
+
+ld.lld: error: undefined symbol: GameTextInput_setEventCallback
+>>> referenced by GameActivity.cpp:514 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:514)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(initializeNativeCode_native(_JNIEnv*, _jobject*, _jstring*, _jstring*, _jstring*, _jobject*, _jbyteArray*, _jobject*))
+
 ld.lld: error: undefined symbol: GameActivityMotionEvent_destroy
 >>> referenced by android_native_app_glue.c:541 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/native_app_glue/android_native_app_glue.c:541)
 >>>               CMakeFiles/realms.dir/main.cpp.o:(android_app_clear_motion_events)
-clang++: error: linker command failed with exit code 1 (use -v to see invocation)
-ninja: build stopped: subcommand failed.
 
-C++ build system [build] failed while executing:
-    /usr/local/lib/android/sdk/cmake/3.22.1/bin/ninja \
-      -C \
-      /home/runner/work/131/131/app/.cxx/Debug/1e2g734d/arm64-v8a \
-      realms
-  from /home/runner/work/131/131/app
-	at com.android.build.gradle.internal.cxx.process.ExecuteProcessKt.execute(ExecuteProcess.kt:288)
-	at com.android.build.gradle.internal.cxx.process.ExecuteProcessKt$executeProcess$1.invoke(ExecuteProcess.kt:108)
-	at com.android.build.gradle.internal.cxx.process.ExecuteProcessKt$executeProcess$1.invoke(ExecuteProcess.kt:106)
-	at com.android.build.gradle.internal.cxx.timing.TimingEnvironmentKt.time(TimingEnvironment.kt:32)
+ld.lld: error: undefined symbol: GameActivityMotionEvent_fromJava
+>>> referenced by GameActivity.cpp:908 (/home/runner/.gradle/caches/transforms-4/72f068bed61fe6d92c5d9627bd8cdab8/transformed/games-activity-3.0.5/prefab/modules/game-activity/include/game-activity/GameActivity.cpp:908)
+>>>               CMakeFiles/realms.dir/main.cpp.o:(onTouchEvent_native(_JNIEnv*, _jobject*, long, _jobject*, int, int, int, int, int, long, long, int, int, int, int, int, int, float, float))
 =================== TAIL ===================
 ninja: build stopped: subcommand failed.
 
@@ -120,5 +287,5 @@ Caused by: org.gradle.process.internal.ExecException: Process 'command '/usr/loc
 	... 137 more
 
 
-BUILD FAILED in 1m 37s
-26 actionable tasks: 26 executed
+BUILD FAILED in 1m 59s
+30 actionable tasks: 30 executed
